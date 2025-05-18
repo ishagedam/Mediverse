@@ -1,310 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mediverse - Healthcare Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
 
-<div id="main">
-
+  <!-- Navigation -->
   <div id="nav">
-   <div class="left">
-     <h2>Mediverse</h2></div>
-      <div class="right">
-        <a href="">About</a>
-        <a href="">Doctors</a>
-        <a href="">Services</a>
-      </div>    
-      <i class="ri-menu-3-line" ></i>           
-  </div>
-
-<!-- sliding navbar -->
-   <div id="full">
-                <h4>About</h4>
-                <h4>Services</h4>
-                <h4>Contact</h4>
-                <h4>Doctors</h4>
-                <h4>Appointment</h4>
-                <i class="ri-close-line"></i>
+    <div class="left"><h2>Mediverse</h2></div>
+    <div class="right">
+      <a href="#services">Services</a>
+      <a href="#appointment-section">Appointment</a>
+      <a href="#doctors">Doctors</a>
     </div>
-
-<!-- Appointment Section -->
-  <div id="appointment-section">
-  <button id="openFormBtn">Book Appointment</button>
-   
-  <div class="appointment-form-container" id="appointmentFormContainer" style="display: none;">
-    <h2 id="formHeading">Doctor Appointment Form</h2>
-    <span class="close-btn" id="closeFormBtn">&times;</span>
-    <form id="appointmentForm">
-      <div class="form-group">
-        <input type="text" id="firstName" name="firstName" placeholder=" " required />
-        <label for="firstName">First Name</label>
-      </div>
-
-      <div class="form-group">
-        <input type="text" id="lastName" name="lastName" placeholder=" " required />
-        <label for="lastName">Last Name</label>
-      </div>
-
-      <div class="form-group">
-        <input type="tel" id="contact" name="contact" placeholder=" " required />
-        <label for="contact">Contact Number</label>
-      </div>
-
-      <div class="form-group">
-        <input type="email" id="email" name="email" placeholder=" " required />
-        <label for="email">Email ID</label>
-      </div>
-
-      <div class="form-group">
-        <select id="department" name="department" required>
-          <option value="" disabled selected></option>
-          <option value="cardiology">Cardiology</option>
-          <option value="neurology">Neurology</option>
-          <option value="orthopedic">Orthopedic</option>
-          <option value="dermatology">Dermatology</option>
-          <option value="pediatrics">Pediatrics</option>
-          <option value="gynecology">Gynecology</option>
-          <option value="urology">Urology</option>
-          <option value="radiology">Radiology</option>
-        </select>
-        <label for="department">Department</label>
-      </div>
-
-      <div class="form-group">
-        <select id="district" name="district" required>
-          <option value="" disabled selected></option>
-          <option value="mumbai">Mumbai</option>
-          <option value="delhi">Delhi</option>
-          <option value="bangalore">Bangalore</option>
-          <option value="hyderabad">Hyderabad</option>
-        </select>
-        <label for="district">District</label>
-      </div>
-
-      <div class="form-group">
-        <select id="city" name="city" required>
-          <option value="" disabled selected></option>
-          <option value="andheri">Andheri</option>
-          <option value="dwarka">Dwarka</option>
-          <option value="whitefield">Whitefield</option>
-          <option value="banjara">Banjara Hills</option>
-        </select>
-        <label for="city">City</label>
-      </div>
-
-      <div class="button-group">
-        <button type="submit" class="submit-btn">Submit</button>
-        <button type="button" class="reset-btn" id="resetBtn">Reset</button>
-      </div>
-    </form>
-  </div>
+    <i class="ri-menu-3-line"></i>
   </div>
 
-</div>
+  <!-- Sliding Nav -->
+  <div id="full">
+    <h4>Services</h4>
+    <h4>Appointment</h4>
+    <h4>Doctors</h4>
+    <i class="ri-close-line"></i>
+  </div>
 
-<!-- Services -->
-<section  class="section2" >
+  <!-- Services Section -->
+  <section class="section2" id="services">
+    <div class="services">
+      <h2 class="section-heading">Services</h2>
+    </div>
   
-  <div class="services">
-    <h3>Services</h3>
-    <p>Lorem, r placeat quaertatibus esse, deserunt culpa iure reiciendis nostrum, voluptatum beatae doloribus hic nulla perspiciatis.</p>
-  </div>
-
-  <div class="container">
-
-    <div class="elem line1 left">
-       <div class="elem-part1">
-        <h2>cardiology</h2>
-        <h4>learn more</h4>
-      </div> 
-     <div class="img">
-      <img src="https://i.pinimg.com/736x/aa/b9/60/aab96050e325330131caf51d8ad730e8.jpg"style="width: 90%; height: 100%" alt="" class="src">
-     </div>
-    </div>
-
-
-       <div class="elem black line1 right">
-  <div class="elem-part1">
-        <h2>Dental</h2>
-        <h4>learn more</h4>
-      </div> 
-     <div class="img">
-      <img src="https://i.pinimg.com/736x/78/56/49/78564993df6268446d3b9a9327f9a548.jpg" style="width: 90%; height: 100%" alt="" class="src">
-     </div>
-       </div>
- 
-
-          <div class="elem black line2 left">
-                   <div class="elem-part1">
-        <h2>Orthopedics</h2>
-        <h4>learn more</h4>
-      </div> 
-     <div class="img">
-      <img src="https://i.pinimg.com/736x/07/ef/b4/07efb4f742cdb2ee70d58bdd299c58d6.jpg" style="width: 90%; height: 100%" alt="" class="src">
-     </div>
-          </div>
-
-
-             <div class="elem line2 right">
-                     <div class="elem-part1">
-        <h2>Neurology</h2>
-        <h4>learn more</h4>
-      </div> 
-     <div class="img">
-      <img src="https://i.pinimg.com/736x/1b/f1/b3/1bf1b380715ac42af5b8e1f33fe947d1.jpg"style="width: 90%; height: 100%" alt="" class="src">
-     </div>
-             </div>
-
-          <div class="elem black line3 left">
-  <div class="elem-part1">
-        <h2>Surgent</h2>
-        <h4>learn more</h4>
-      </div> 
-     <div class="img">
-      <img src="https://i.pinimg.com/736x/36/b9/b6/36b9b6b9f82b4a9dc290f40c25dccebe.jpg"style="width: 90%; height: 100%" alt="">
-     </div>
+    <div class="container">
+      <!-- Cardiology -->
+      <div class="elem line1 left">
+        <div class="elem-part1">
+          <h2>Cardiology</h2>
+          <h4>Learn more</h4>
         </div>
-
-
- <div class="elem black line3 right">
-  <div class="elem-part1">
-        <h2>cardiology</h2>
-        <h4>learn more</h4>
-      </div> 
-     <div class="img">
-      <img src="https://i.pinimg.com/736x/2a/e8/4f/2ae84f3288f70ccaa6d6662c54d8ef0a.jpg" style="width: 90%; height: 100%" alt="" class="src">
-     </div>
-       </div>
-  </div>
-</section>
- 
-
-
-
-<section class="section3"> 
-  <div class="let">
-    <h2>Top Doctors to Book</h2>
-    <p>Simply browse through our extensive list of trusted doctors. </p>
-  </div>
-
-
-
-  <div class="row-container">
-  <div id="First-Row">
-    
-  <div class="docs">
-    <div class="img2">
-      
-    <h3 class="text">Dr. Aanya Mehra </h3>
-    <h4 class="text">Cardiologist</h4></div>
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/aa/b9/60/aab96050e325330131caf51d8ad730e8.jpg" alt="Cardiology">
+        </div>
+      </div>
+  
+      <!-- Dental -->
+      <div class="elem line1 right">
+        <div class="elem-part1">
+          <h2>Dental</h2>
+          <h4>Learn more</h4>
+        </div>
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/78/56/49/78564993df6268446d3b9a9327f9a548.jpg" alt="Dental">
+        </div>
+      </div>
+  
+      <!-- Orthopedics -->
+      <div class="elem line2 left">
+        <div class="elem-part1">
+          <h2>Orthopedics</h2>
+          <h4>Learn more</h4>
+        </div>
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/07/ef/b4/07efb4f742cdb2ee70d58bdd299c58d6.jpg" alt="Orthopedics">
+        </div>
+      </div>
+  
+      <!-- Neurology -->
+      <div class="elem line2 right">
+        <div class="elem-part1">
+          <h2>Neurology</h2>
+          <h4>Learn more</h4>
+        </div>
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/1b/f1/b3/1bf1b380715ac42af5b8e1f33fe947d1.jpg" alt="Neurology">
+        </div>
+      </div>
+  
+      <!-- Surgery -->
+      <div class="elem line3 left">
+        <div class="elem-part1">
+          <h2>Surgery</h2>
+          <h4>Learn more</h4>
+        </div>
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/36/b9/b6/36b9b6b9f82b4a9dc290f40c25dccebe.jpg" alt="Surgery">
+        </div>
+      </div>
+  
+      <!--Dermatology -->
+      <div class="elem line3 right">
+        <div class="elem-part1">
+          <h2>Dermatology</h2>
+          <h4>Learn more</h4>
+        </div>
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/2a/e8/4f/2ae84f3288f70ccaa6d6662c54d8ef0a.jpg" alt="Cardiology">
+        </div>
+      </div>
     </div>
-
-
-      <div class="docs">
-        <div class="text">
-    <h3>Dr. Richard James</h3>
-    <h4>gerneral Physician</h4></div>
-  </div>
-
-     
-      <div class="docs"><div class="text">
-    <h3>Dr. Rohit Singhaniya </h3>
-    <h4>Dermatologist</h4></div>
-  </div>
-
-      <div class="docs"><div class="text">
-    <h3>Dr. Christopher Lee</h3>
-    <h4>Pediatrician</h4></div>
-  </div>
-
-      <div class="docs"><div class="text">
-    <h3>Dr. Meera Reddy</h3>
-    <h4>Neurologist</h4></div>
-  </div>
-</div>
+  </section>
   
 
-<br>
-<br>
+  <!-- Appointment Section -->
+  <section id="appointment-section">
+    <button id="openFormBtn">Book Appointment</button>
+    <div class="appointment-form-container" id="appointmentFormContainer" style="display: none;">
+      <h2 id="formHeading">Doctor Appointment Form</h2>
+      <span class="close-btn" id="closeFormBtn">&times;</span>
+      <form id="appointmentForm">
+        <div class="form-group"><input type="text" id="firstName" name="firstName" placeholder=" " required /><label for="firstName">First Name</label></div>
+        <div class="form-group"><input type="text" id="lastName" name="lastName" placeholder=" " required /><label for="lastName">Last Name</label></div>
+        <div class="form-group"><input type="tel" id="contact" name="contact" placeholder=" " required /><label for="contact">Contact Number</label></div>
+        <div class="form-group"><input type="email" id="email" name="email" placeholder=" " required /><label for="email">Email ID</label></div>
+        <div class="form-group">
+          <select id="department" name="department" required>
+            <option value="" disabled selected></option>
+            <option value="cardiology">Cardiology</option>
+            <option value="neurology">Neurology</option>
+            <option value="orthopedic">Orthopedic</option>
+            <option value="dermatology">Dermatology</option>
+            <option value="pediatrics">Pediatrics</option>
+            <option value="gynecology">Gynecology</option>
+          </select>
+          <label for="department">Department</label>
+        </div>
+        <div class="form-group">
+          <select id="district" name="district" required>
+            <option value="" disabled selected></option>
+            <option value="mumbai">Mumbai</option>
+            <option value="delhi">Delhi</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="hyderabad">Hyderabad</option>
+          </select>
+          <label for="district">District</label>
+        </div>
+        <div class="form-group">
+          <select id="city" name="city" required>
+            <option value="" disabled selected></option>
+            <option value="andheri">Andheri</option>
+            <option value="dwarka">Dwarka</option>
+            <option value="whitefield">Whitefield</option>
+            <option value="banjara">Banjara Hills</option>
+          </select>
+          <label for="city">City</label>
+        </div>
+        <div class="button-group">
+          <button type="submit" class="submit-btn">Submit</button>
+          <button type="button" class="reset-btn" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </div>
+  </section>
 
-<div id="Second-Row">
-  <div class="docs">
-    <div class="text">
-    <h3>Dr. Rajeev Patel</h3>
-    <h4> Cardiologist.</h4></div>
-  </div>
+  <!-- Doctors Section -->
+  <section class="section3" id="doctors">
+    <div class="let">
+      <h2>Top Doctors to Book</h2>
+      <p>Simply browse through our trusted doctors.</p>
+    </div>
+    <div class="row-container">
+      <div id="First-Row">
+        <div class="docs"><img src="Assets/girl.jpg" class="doc-img" alt="Dr. Aanya Mehra"><h3>Dr. Aanya Mehra</h3><h4>Cardiologist</h4></div>
+        <div class="docs"><img src="Assets/boy.jpg" class="doc-img" alt="Dr. Richard James"><h3>Dr. Richard James</h3><h4>General Physician</h4></div>
+        <div class="docs"><img src="Assets/girl2.jpg" class="doc-img" alt="Dr. Rohit Singhaniya"><h3>Dr. Rohit Singhaniya</h3><h4>Dermatologist</h4></div>
+        <div class="docs"><img src="Assets/girl3.jpg" class="doc-img" alt="Dr. Meera Reddy"><h3>Dr. Meera Reddy</h3><h4>Neurologist</h4></div>
+        <div class="docs"><img src="Assets/boy3.jpg" class="doc-img" alt="Dr. Christopher Lee"><h3>Dr. Christopher Lee</h3><h4>Pediatrician</h4></div>
+      </div>
+      <div id="Second-Row">
+        <div class="docs"><img src="Assets/girl5.jpg" class="doc-img" alt="Dr. Rajeev Patel"><h3>Dr. Rajeev Patel</h3><h4>Cardiologist</h4></div>
+        <div class="docs"><img src="Assets/girl.jpg" class="doc-img" alt="Dr. John Millard"><h3>Dr. John Millard</h3><h4>Ophthalmologist</h4></div>
+        <div class="docs"><img src="Assets/boy.jpg" class="doc-img" alt="Dr. Sneha Verma"><h3>Dr. Sneha Verma</h3><h4>Gynecologist</h4></div>
+        <div class="docs"><img src="Assets/girl2.jpg" class="doc-img" alt="Dr. Arjun Bhatia"><h3>Dr. Arjun Bhatia</h3><h4>ENT Specialist</h4></div>
+        <div class="docs"><img src="Assets/girl3.jpg" class="doc-img" alt="Dr. Nidhi Kapoor"><h3>Dr. Nidhi Kapoor</h3><h4>Dentist</h4></div>
+      </div>
+    </div>
+  </section>
 
-      <div class="docs">
-        <div class="text">
-    <h3>Dr. John Millard</h3>
-    <h4>Ophthalmology</h4></div>
-  </div>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
 
-     
-      <div class="docs"><div class="text">
-    <h3>Dr. Sneha Verma</h3>
-    <h4>Gynecologist</h4></div>
-  </div>
-
-      <div class="docs"><div class="text">
-    <h3>Dr. Arjun Bhatia</h3>
-    <h4>ENT(Ear,Nose,Throat)</h4></div>
-  </div>
-
-      <div class="docs"><div class="text">
-    <h3>Dr. Nidhi Kapoor </h3>
-    <h4>Dentistry</h4></div>
-  </div>
-</div>
-  </div>
-  
-</div>
-</section>
-
- 
-    <!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./index.js"></script>
-  </body>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
