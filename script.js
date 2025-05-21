@@ -24,30 +24,6 @@ gsap.from(".section2 .elem", {
   y: 50, opacity: 0, duration: 1, stagger: 0.2
 });
 
-// Appointment form toggle
-const openBtn = document.getElementById("openFormBtn");
-const closeBtn = document.getElementById("closeFormBtn");
-const formContainer = document.getElementById("appointmentFormContainer");
-const form = document.getElementById("appointmentForm");
-
-openBtn.addEventListener("click", () => {
-  formContainer.style.display = "block";
-  gsap.fromTo(formContainer, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.6 });
-});
-
-closeBtn.addEventListener("click", () => {
-  gsap.to(formContainer, {
-    opacity: 0,
-    y: 50,
-    duration: 0.6,
-    onComplete: () => formContainer.style.display = "none"
-  });
-});
-
-document.getElementById("resetBtn").addEventListener("click", () => {
-  form.reset();
-});
-
 // Show only top doctors on load and render star rating
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".docs").forEach(doc => {

@@ -14,7 +14,6 @@
     <div class="left"><h2>Mediverse</h2></div>
     <div class="right">
       <a href="#services">Services</a>
-      <a href="#appointment-section">Appointment</a>
       <a href="#doctors">Doctors</a>
     </div>
     <i class="ri-menu-3-line"></i>
@@ -58,57 +57,6 @@
         <div class="elem-part1"><h2>Dermatology</h2><h4>Learn more</h4></div>
         <div class="img"><img src="https://i.pinimg.com/736x/2a/e8/4f/2ae84f3288f70ccaa6d6662c54d8ef0a.jpg" alt="Dermatology"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- Appointment Section -->
-  <section id="appointment-section">
-    <button id="openFormBtn">Book Appointment</button>
-    <div class="appointment-form-container" id="appointmentFormContainer" style="display: none;">
-      <h2 id="formHeading">Doctor Appointment Form</h2>
-      <span class="close-btn" id="closeFormBtn">&times;</span>
-      <form id="appointmentForm">
-        <div class="form-group"><input type="text" id="firstName" name="firstName" placeholder=" " required /><label for="firstName">First Name</label></div>
-        <div class="form-group"><input type="text" id="lastName" name="lastName" placeholder=" " required /><label for="lastName">Last Name</label></div>
-        <div class="form-group"><input type="tel" id="contact" name="contact" placeholder=" " required /><label for="contact">Contact Number</label></div>
-        <div class="form-group"><input type="email" id="email" name="email" placeholder=" " required /><label for="email">Email ID</label></div>
-        <div class="form-group">
-          <select id="department" name="department" required>
-            <option value="" disabled selected></option>
-            <option value="cardiology">Cardiology</option>
-            <option value="neurology">Neurology</option>
-            <option value="orthopedic">Orthopedic</option>
-            <option value="dermatology">Dermatology</option>
-            <option value="pediatrics">Pediatrics</option>
-            <option value="gynecology">Gynecology</option>
-          </select>
-          <label for="department">Department</label>
-        </div>
-        <div class="form-group">
-          <select id="district" name="district" required>
-            <option value="" disabled selected></option>
-            <option value="mumbai">Mumbai</option>
-            <option value="delhi">Delhi</option>
-            <option value="bangalore">Bangalore</option>
-            <option value="hyderabad">Hyderabad</option>
-          </select>
-          <label for="district">District</label>
-        </div>
-        <div class="form-group">
-          <select id="city" name="city" required>
-            <option value="" disabled selected></option>
-            <option value="andheri">Andheri</option>
-            <option value="dwarka">Dwarka</option>
-            <option value="whitefield">Whitefield</option>
-            <option value="banjara">Banjara Hills</option>
-          </select>
-          <label for="city">City</label>
-        </div>
-        <div class="button-group">
-          <button type="submit" class="submit-btn">Submit</button>
-          <button type="button" class="reset-btn" id="resetBtn">Reset</button>
-        </div>
-      </form>
     </div>
   </section>
 
