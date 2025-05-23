@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mediverse - Healthcare Platform</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div id="nav">
+    <div class="left"><h2>Mediverse</h2></div>
+    <div class="right">
+      <a href="#services">Services</a>
+      <a href="#doctors">Doctors</a>
+    </div>
+    <i class="ri-menu-3-line"></i>
+  </div>
+
+  <!-- Full Menu -->
+  <div id="full">
+    <h4>Services</h4>
+    <h4>Doctors</h4>
+    <i class="ri-close-line"></i>
+  </div>
+
+  <!-- Services Section (Dynamic) -->
+  <section class="section2" id="services">
+    <div class="services">
+      <h2 class="section-heading">Services</h2>
+    </div>
+    <div class="container" id="services-container">
+      <!-- Dynamically loaded service cards go here -->
+    </div>
+  </section>
+
+  <!-- Doctors Section (Dynamic) -->
+  <section class="section3" id="doctors">
+    <div class="let">
+      <h2 id="doctors-heading">Top Doctors to Book</h2>
+      <p>Simply browse through our trusted doctors.</p>
+      <div class="center-button">
+        <button id="reset-filter" class="top-doctor-btn">Show All Top Doctors</button>
+      </div><br>
+    </div>
+    <div class="row-container">
+      <div id="First-Row"></div>
+      <div id="Second-Row"></div>
+    </div>
+  </section>
+
+  <!-- ✅ Fixed Appointment Modal -->
+  <!-- ✅ Fixed Appointment Modal -->
+<div id="appointment-modal" class="modal">
+  <div class="modal-content appointment-form">
+    <span class="close">&times;</span>
+    <h2 id="modal-doctor-name">Book Appointment</h2>
+
+    <form id="appointment-form">
+      <!-- Step 1 -->
+      <div class="form-step active" id="step-1">
+        <h4>👤 Patient Information</h4>
+        <input type="text" id="firstName" placeholder="First Name" required />
+        <small class="error" id="firstName-error"></small>
+
+        <input type="text" id="lastName" placeholder="Last Name" required />
+        <small class="error" id="lastName-error"></small>
+
+        <input type="number" id="age" placeholder="Age" min="1" required />
+        <small class="error" id="age-error"></small>
+
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <small class="error" id="gender-error"></small>
+
+        <input type="email" id="patientEmail" placeholder="Email" required />
+        <small class="error" id="email-error"></small>
+
+        <button type="button" onclick="nextStep()">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step" id="step-2">
+        <h4>📅 Appointment Details</h4>
+
+        <input type="date" id="appointmentDate" required />
+        <small class="error" id="date-error"></small>
+
+        <div class="time-group">
+          <input type="time" id="appointmentTime" required />
+          <select id="amPm">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+        <small class="error" id="time-error"></small>
+
+        <div class="step-buttons">
+          <button type="button" onclick="prevStep()">Back</button>
+          <button type="submit">Book Now</button>
+        </div>
+      </div>
+
+      <input type="hidden" id="doctorName" name="doctor" />
+    </form>
+  </div>
+</div>  
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
