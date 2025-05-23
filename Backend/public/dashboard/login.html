@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Doctor Login - Mediverse</title>
+  <link rel="stylesheet" href="login.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="left">
+        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Doctor" class="doctor-illustration" />
+        <h2>Welcome Back, Doctor 👨‍⚕️</h2>
+        <p>Access your dashboard and appointments.</p>
+      </div>
+      <div class="right">
+        <h3>Doctor Login</h3>
+        <form id="login-form">
+          <label for="doctor">Select Your Name</label>
+          <select id="doctor" required>
+            <option value="">-- Choose Doctor --</option>
+          </select>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter Password" required />
+
+          <button type="submit">
+            <span id="login-text">Login</span>
+            <div id="spinner" class="spinner" style="display: none;"></div>
+          </button>
+        </form>
+        <div class="forgot-link centered">
+            <a href="#" id="forgot-password-btn">Forgot password?</a>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="forgot-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Reset Password</h2>
+      <p>Enter your email to receive reset instructions:</p>
+      <form id="forgot-form">
+        <input type="email" id="reset-email" placeholder="Your Email" required />
+        <button type="submit">Send Reset Link</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

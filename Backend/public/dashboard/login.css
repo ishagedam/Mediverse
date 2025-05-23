@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f3f9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .login-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .login-card .left {
+    background: #2575fc;
+    color: white;
+    padding: 40px 30px;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .login-card .left img {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+  
+  .login-card .left h2 {
+    margin-bottom: 10px;
+  }
+  
+  .login-card .right {
+    flex: 1;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-card h3 {
+    margin-bottom: 20px;
+    color: #2575fc;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input, select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  button {
+    background: #2575fc;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #1b5ee5;
+  }
+  
+  .note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Spinner */
+.spinner {
+    border: 3px solid #ffffff;
+    border-top: 3px solid #2575fc;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .forgot-link {
+    margin-top: 12px;
+    text-align: right;
+  }
+  
+  .forgot-link a {
+    font-size: 14px;
+    color: #2575fc;
+    text-decoration: none;
+  }
+  
+  .forgot-link a:hover {
+    text-decoration: underline;
+  }
+  .centered {
+    text-align: center;
+    margin-top: 16px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: slideIn 0.4s ease;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .modal-content button {
+    background: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background: #1b5ee5;
+  }
+  
+  .modal .close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+    

@@ -43,7 +43,7 @@
       <p>Simply browse through our trusted doctors.</p>
       <div class="center-button">
         <button id="reset-filter" class="top-doctor-btn">Show All Top Doctors</button>
-      </div>
+      </div><br>
     </div>
     <div class="row-container">
       <div id="First-Row"></div>
@@ -52,28 +52,65 @@
   </section>
 
   <!-- ✅ Fixed Appointment Modal -->
-  <div id="appointment-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 id="modal-doctor-name">Book Appointment</h2>
-      <form id="appointment-form">
+  <!-- ✅ Fixed Appointment Modal -->
+<div id="appointment-modal" class="modal">
+  <div class="modal-content appointment-form">
+    <span class="close">&times;</span>
+    <h2 id="modal-doctor-name">Book Appointment</h2>
+
+    <form id="appointment-form">
+      <!-- Step 1 -->
+      <div class="form-step active" id="step-1">
+        <h4>👤 Patient Information</h4>
         <input type="text" id="firstName" placeholder="First Name" required />
+        <small class="error" id="firstName-error"></small>
+
         <input type="text" id="lastName" placeholder="Last Name" required />
-        <input type="number" id="age" placeholder="Age" min="0" required />
+        <small class="error" id="lastName-error"></small>
+
+        <input type="number" id="age" placeholder="Age" min="1" required />
+        <small class="error" id="age-error"></small>
+
         <select id="gender" required>
           <option value="">Select Gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Other">Other</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
         </select>
+        <small class="error" id="gender-error"></small>
+
         <input type="email" id="patientEmail" placeholder="Email" required />
+        <small class="error" id="email-error"></small>
+
+        <button type="button" onclick="nextStep()">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step" id="step-2">
+        <h4>📅 Appointment Details</h4>
+
         <input type="date" id="appointmentDate" required />
-        <input type="time" id="appointmentTime" required />
-        <input type="hidden" id="doctorName" name="doctor" />
-        <button type="submit">Book Now</button>
-      </form>
-    </div>
+        <small class="error" id="date-error"></small>
+
+        <div class="time-group">
+          <input type="time" id="appointmentTime" required />
+          <select id="amPm">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+        <small class="error" id="time-error"></small>
+
+        <div class="step-buttons">
+          <button type="button" onclick="prevStep()">Back</button>
+          <button type="submit">Book Now</button>
+        </div>
+      </div>
+
+      <input type="hidden" id="doctorName" name="doctor" />
+    </form>
   </div>
+</div>  
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

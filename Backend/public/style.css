@@ -266,11 +266,72 @@ html, body {
   font-weight: bold;
   cursor: pointer;
 }
-
+.modal-content h2 {
+  text-align: center;
+}
 .close {
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 24px;
   cursor: pointer;
+}
+input:invalid,
+select:invalid {
+  border: 2px solid #ff4d4f;
+  background-color: #fff5f5;
+}
+
+input.valid,
+select.valid {
+  border: 2px solid #52c41a;
+  background-color: #f6ffed;
+}
+
+.appointment-form {
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.form-step {
+  display: none;
+}
+.form-step.active {
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus, select:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+.error {
+  color: #d8000c;
+  font-size: 13px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.time-group {
+  display: flex;
+  gap: 10px;
+}
+
+.step-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
 }
